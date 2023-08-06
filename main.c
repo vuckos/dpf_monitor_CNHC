@@ -322,7 +322,7 @@ void power_off(){
 
 float calculate_soot_mass(void){
     //return (((can_rx_data[4]*256)+can_rx_data[5])/100.0);
-    return ((uint16_t)(((uint8_t)can_rx_data[4]<<8) | ((uint8_t)can_rx_data[5]<<0)))/100.0;
+    return ((int16_t)(((uint8_t)can_rx_data[4]<<8) | ((uint8_t)can_rx_data[5]<<0)))/100.0;
 }
 
 float calculate_distance_since(void){
